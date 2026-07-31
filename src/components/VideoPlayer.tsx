@@ -1,11 +1,10 @@
 import { useState, useRef } from 'react';
 import {
-  Play, Pause, SkipBack, SkipForward, Maximize2,
-  Volume2, VolumeX, RotateCcw, Clock, Film, Cpu,
-  Sparkles, CheckCircle2, Loader2, AlertCircle, Wand2
+  Play, Pause, SkipBack, SkipForward,
+  Volume2, VolumeX, Film,
+  CheckCircle2, Loader2, Wand2
 } from 'lucide-react';
 import type { ManimScene, Project } from './Types';
-import { motion, AnimatePresence } from 'framer-motion';
 
 interface VideoPlayerProps {
   project: Project;
@@ -33,7 +32,6 @@ export default function VideoPlayer({
   const [promptText, setPromptText] = useState(project.prompt || '');
   const [isMuted, setIsMuted] = useState(false);
   const [playbackSpeed, setPlaybackSpeed] = useState<'1.0x' | '1.5x' | '2.0x'>('1.0x');
-  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
 

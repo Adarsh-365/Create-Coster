@@ -1,10 +1,9 @@
 import { useRef } from 'react';
 import {
-  CheckCircle2, Loader2, AlertCircle, Circle,
-  Pencil, RefreshCw, Copy, Trash2, Clock, FileCode2
+  CheckCircle2, Loader2, AlertCircle,
+  Pencil, RefreshCw, Clock, FileCode2
 } from 'lucide-react';
 import type { ManimScene, SceneStatus } from './Types';
-import { motion } from 'framer-motion';
 
 interface StoryboardTimelineProps {
   scenes: ManimScene[];

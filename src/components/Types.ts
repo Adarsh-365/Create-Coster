@@ -52,14 +52,19 @@ export interface Project {
 }
 
 export interface SettingsState {
-  theme: 'dark';
-  fontSize: 'sm' | 'base';
+  theme: 'light' | 'dark' | 'system';
+  fontSize: 'sm' | 'base' | 'lg' | 'xl';
+  language: string;
   autoSave: boolean;
   notifications: boolean;
+  streaming: boolean;
+  memoryEnabled: boolean;
+  historyEnabled: boolean;
   renderEngine: 'Manim Community v0.18.0' | 'ManimGL v1.6';
   apiKeys: {
     openai: string;
     anthropic: string;
     gemini: string;
+    deepseek: string;
   };
 }

@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import {
   Plus, Film, FolderOpen, Settings, PanelLeftClose, PanelLeftOpen,
-  Search, CheckCircle2, Loader2, AlertCircle, Circle, Video,
-  BookMarked, Sparkles, ChevronRight
+  Search, Video, BookMarked, Sparkles
 } from 'lucide-react';
 import type { Project, GenerationPhase } from './Types';
-import { motion, AnimatePresence } from 'framer-motion';
 
 interface SidebarProps {
   projects: Project[];

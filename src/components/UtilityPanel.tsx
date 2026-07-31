@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import {
   Code2, Terminal, MessageSquare, Settings2, Copy, Check,
-  Play, RotateCcw, Download, Sparkles, Sliders, Cpu, Trash2, X
+  Download, Sparkles, X
 } from 'lucide-react';
 import type { ManimScene, ProjectSettings } from './Types';
-import { motion, AnimatePresence } from 'framer-motion';
 
 interface UtilityPanelProps {
   scene: ManimScene | null;
@@ -20,14 +19,14 @@ type TabType = 'code' | 'console' | 'script' | 'settings';
 export default function UtilityPanel({
   scene,
   settings,
-  onUpdateCode,
+  onUpdateCode: _onUpdateCode,
   onUpdateScript,
   onUpdateSettings,
   onClose,
 }: UtilityPanelProps) {
   const [activeTab, setActiveTab] = useState<TabType>('code');
   const [copiedCode, setCopiedCode] = useState(false);
-  const [isConsoleLive, setIsConsoleLive] = useState(true);
+  const [, setIsConsoleLive] = useState(true);
 
   if (!scene) {
     return (

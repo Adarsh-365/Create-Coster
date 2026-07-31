@@ -11,13 +11,18 @@ import { MOCK_PROJECTS, simulateProjectGeneration } from './components/MockData'
 const DEFAULT_SETTINGS: SettingsState = {
   theme: 'dark',
   fontSize: 'base',
+  language: 'English',
   autoSave: true,
   notifications: true,
+  streaming: true,
+  memoryEnabled: true,
+  historyEnabled: true,
   renderEngine: 'Manim Community v0.18.0',
   apiKeys: {
     openai: '',
     anthropic: '',
     gemini: '',
+    deepseek: '',
   }
 };
 
